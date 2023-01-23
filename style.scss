@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  background-color: #e1dee5;
+  padding: 5rem;
+  min-height: 100vh;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea,
+button {
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+label,
+input {
+  font-size: 1.6rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
+}
+$primaryColor: #fc556f;
+$secondaryColor: #fd9c84;
+$blueColor: #42a7fe;
+$greenColor: #00c899;
+$textColor: #20134f;
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $flex-direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+@mixin size($width: width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
+}
+.signup {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(black, 0.1);
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  &__content,
+  &__image {
+    width: calc(50% - 4rem);
+  }
+  &__heading {
+    font-weight: bold;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    color: $textColor;
+  }
+  &__caption {
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 4.5rem;
+    position: relative;
+    padding-left: 12rem;
+    &::before {
+      content: "";
+      width: 10rem;
+      height: 2px;
+      background-color: $primaryColor;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-social {
+    @include flexbox(stretch, space-between);
+    &__item {
+      padding: 1.5rem 2.5rem;
+      border: 1px solid #eee;
+      cursor: pointer;
+      @include flexbox(center, center);
+      color: $textColor;
+      width: calc(50% - 1.5rem);
+    }
+    &__icon {
+      margin-right: 2rem;
+    }
+  }
+}
