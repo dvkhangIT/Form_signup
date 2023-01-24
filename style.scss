@@ -7,6 +7,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  font-size: 1.6rem;
   font-weight: normal;
   font-family: "Poppins", sans-serif;
   background-color: #e1dee5;
@@ -114,6 +115,7 @@ input[type="number"]::-webkit-outer-spin-button {
     &__item {
       padding: 1.5rem 2.5rem;
       border: 1px solid #eee;
+      border-radius: 10px;
       cursor: pointer;
       @include flexbox(center, center);
       color: $textColor;
@@ -121,6 +123,79 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     &__icon {
       margin-right: 2rem;
+    }
+  }
+  &-form {
+    &__lable {
+      color: $textColor;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transform: translateX(1rem);
+      cursor: pointer;
+    }
+    &__input {
+      padding: 1.5rem 2rem;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      display: block;
+      width: 100%;
+    }
+    &__row {
+      @include flexbox(stretch, space-between);
+      margin-top: 6rem;
+      margin-bottom: 3rem;
+      .signup-form__group {
+        width: calc(50% - 1.5rem);
+      }
+    }
+    &__term {
+      input {
+        display: none;
+        &:checked + label::before {
+          border-color: $primaryColor;
+          background-color: $primaryColor;
+        }
+      }
+      label {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        margin: 3rem 0 5rem 0;
+        padding-left: 3.5rem;
+        &::before {
+          content: "";
+          @include size(2.5rem);
+          border-radius: 8px;
+          background-color: #eee;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 1px solid #ccc;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+    &__submit {
+      @include size(8rem);
+      border: 0;
+      color: white;
+      border-radius: 3rem;
+      background-color: $primaryColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-bottom: 6.5rem;
+      box-shadow: -1px 0px 10px 5px rgba($primaryColor, 0.5);
+    }
+  }
+  &__already {
+    color: $textColor;
+    a {
+      color: $primaryColor;
     }
   }
 }

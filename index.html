@@ -36,32 +36,36 @@
             <span class="signup-social__text">Sign up with facebook</span>
           </div>
         </div>
-        <form class="singup-form">
-          <div class="signup-form__group">
-            <label for="name" class="singup-form__lable">Name</label>
-            <input type="text" id="name" class="signup-form__input" />
+        <form class="signup-form">
+          <div class="signup-form__row">
+            <div class="signup-form__group">
+              <label for="name" class="signup-form__lable">Name</label>
+              <input type="text" id="name" class="signup-form__input" />
+            </div>
+            <div class="signup-form__group">
+              <label for="email" class="signup-form__lable">Email</label>
+              <input type="email" id="email" class="signup-form__input" />
+            </div>
           </div>
           <div class="signup-form__group">
-            <label for="email" class="singup-form__lable">Email</label>
-            <input type="email" id="email" class="signup-form__input" />
-          </div>
-          <div class="signup-form__group">
-            <label for="password" class="singup-form__lable">Password</label>
+            <label for="password" class="signup-form__lable">Password</label>
             <input type="password" id="password" class="signup-form__input" />
           </div>
           <div class="signup-form__term">
             <input
               type="checkbox"
               name=""
-              id="password"
+              id="term"
               class="signup-form__term"
             />
-            <label for="checkbox">I have read and argee with term</label>
+            <label for="term">I have read and argee with term</label>
           </div>
           <button class="signup-form__submit">
             <i class="fa fa-arrow-right"></i>
           </button>
-          <p>Already signin <a href="#">Signin</a></p>
+          <p class="signup__already">
+            Already signin have an account <a href="#">Signin</a>
+          </p>
         </form>
       </div>
       <div class="signup__iamge">

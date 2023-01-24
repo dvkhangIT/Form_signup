@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
   font-weight: normal;
   font-family: "Poppins", sans-serif;
   background-color: #e1dee5;
@@ -109,6 +110,7 @@ input[type=number]::-webkit-outer-spin-button {
 .signup-social__item {
   padding: 1.5rem 2.5rem;
   border: 1px solid #eee;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -120,6 +122,81 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .signup-social__icon {
   margin-right: 2rem;
+}
+.signup-form__lable {
+  color: #20134f;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transform: translateX(1rem);
+  cursor: pointer;
+}
+.signup-form__input {
+  padding: 1.5rem 2rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+}
+.signup-form__row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+.signup-form__row .signup-form__group {
+  width: calc(50% - 1.5rem);
+}
+.signup-form__term input {
+  display: none;
+}
+.signup-form__term input:checked + label::before {
+  border-color: #fc556f;
+  background-color: #fc556f;
+}
+.signup-form__term label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 3rem 0 5rem 0;
+  padding-left: 3.5rem;
+}
+.signup-form__term label::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #ccc;
+  transition: all 0.2s linear;
+}
+.signup-form__submit {
+  width: 8rem;
+  height: 8rem;
+  border: 0;
+  color: white;
+  border-radius: 3rem;
+  background-color: #fc556f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 6.5rem;
+  box-shadow: -1px 0px 10px 5px rgba(252, 85, 111, 0.5);
+}
+.signup__already {
+  color: #20134f;
+}
+.signup__already a {
+  color: #fc556f;
 }
 
 /*# sourceMappingURL=style.css.map */
