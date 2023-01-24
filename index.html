@@ -36,20 +36,44 @@
             <span class="signup-social__text">Sign up with facebook</span>
           </div>
         </div>
-        <form class="signup-form">
+        <form class="signup-form" autocomplete="off">
           <div class="signup-form__row">
             <div class="signup-form__group">
               <label for="name" class="signup-form__lable">Name</label>
-              <input type="text" id="name" class="signup-form__input" />
+              <div class="signup-form__validate">
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Name"
+                  class="signup-form__input"
+                />
+                <div class="signup-form__check">
+                  <i class="fa fa-check"></i>
+                </div>
+              </div>
             </div>
             <div class="signup-form__group">
               <label for="email" class="signup-form__lable">Email</label>
-              <input type="email" id="email" class="signup-form__input" />
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="Email"
+                class="signup-form__input"
+              />
             </div>
           </div>
           <div class="signup-form__group">
             <label for="password" class="signup-form__lable">Password</label>
-            <input type="password" id="password" class="signup-form__input" />
+            <input
+              type="password"
+              id="password"
+              required
+              minlength="10"
+              placeholder="Password"
+              class="signup-form__input"
+            />
           </div>
           <div class="signup-form__term">
             <input
@@ -58,9 +82,11 @@
               id="term"
               class="signup-form__term"
             />
-            <label for="term">I have read and argee with term</label>
+            <label for="term" class="lable"
+              >I have read and argee with term</label
+            >
           </div>
-          <button class="signup-form__submit">
+          <button class="signup-form__submit" type="submit">
             <i class="fa fa-arrow-right"></i>
           </button>
           <p class="signup__already">
@@ -68,9 +94,9 @@
           </p>
         </form>
       </div>
-      <div class="signup__iamge">
+      <div class="signup__image">
         <img
-          src="https://cdn.pixabay.com/photo/2014/04/03/11/58/rocket-312767__340.png"
+          src="https://media.istockphoto.com/id/876037616/vector/rocket-launch-vector-illustration-isolated-on-white.jpg?s=612x612&w=0&k=20&c=BnOXPbM2RyZBSLKLiCJaY_9mkK_1VQ2GuCP-HFFbAX4="
           alt=""
         />
       </div>
